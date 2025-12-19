@@ -6,7 +6,7 @@
   <title>Infinka GiftVerse — Meaning, When It Matters</title>
 
   <!-- SEO -->
-  <meta name="description" content="Infinka GiftVerse helps you choose gifts that feel right — emotionally, culturally, and personally. Calm, thoughtful, and relationship-aware gifting intelligence." />
+  <meta name="description" content="Infinka GiftVerse helps you choose gifts that feel right — emotionally, culturally, and personally. Calm, thoughtful, relationship-aware gifting intelligence." />
   <meta name="robots" content="index, follow"/>
 
   <!-- Fonts -->
@@ -14,12 +14,17 @@
 
   <style>
     :root {
-      --bg: #fbfaf8;
-      --ink: #111;
-      --muted: #666;
-      --line: #e3e1dc;
-      --accent: #d9a441;
-      --soft: #f4f2ed;
+      --bg-cosmic: radial-gradient(
+        circle at top center,
+        #141a2a 0%,
+        #0c1020 45%,
+        #070a14 100%
+      );
+
+      --ink: #f5f5f5;
+      --muted: #b7b7c0;
+      --line: rgba(255,255,255,0.08);
+      --accent-gold: #d9a441;
     }
 
     * {
@@ -30,9 +35,25 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
+      background: var(--bg-cosmic);
       color: var(--ink);
-      line-height: 1.65;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Stardust Layer */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.25), transparent),
+        radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.15), transparent),
+        radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,0.1), transparent);
+      pointer-events: none;
+      z-index: -1;
     }
 
     section {
@@ -40,15 +61,18 @@
       margin: auto;
       padding: 90px 24px;
       border-bottom: 1px solid var(--line);
+      background: rgba(10, 14, 30, 0.55);
+      backdrop-filter: blur(6px);
     }
 
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       font-weight: 600;
+      color: var(--ink);
     }
 
     h1 {
-      font-size: 3.1rem;
+      font-size: 3rem;
       margin-bottom: 22px;
     }
 
@@ -77,19 +101,27 @@
       margin: 22px auto 44px;
     }
 
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 14px;
+      color: var(--accent-gold);
+    }
+
     .cta {
       display: inline-block;
       padding: 14px 30px;
-      border: 1px solid var(--ink);
-      color: var(--ink);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
       text-decoration: none;
       font-weight: 600;
       transition: all 0.25s ease;
     }
 
     .cta:hover {
-      background: var(--ink);
-      color: var(--bg);
+      background: var(--accent-gold);
+      color: #0c1020;
     }
 
     .grid {
@@ -102,15 +134,7 @@
     .card {
       padding: 30px;
       border: 1px solid var(--line);
-      background: #fff;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 14px;
-      color: var(--accent);
+      background: rgba(255,255,255,0.03);
     }
 
     footer {
@@ -118,6 +142,23 @@
       padding: 48px 20px;
       font-size: 0.9rem;
       color: var(--muted);
+      background: rgba(10, 14, 30, 0.6);
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      section {
+        padding: 70px 18px;
+      }
+      .hero {
+        padding-top: 100px;
+      }
     }
   </style>
 </head>
@@ -240,9 +281,7 @@
   <!-- FINAL CTA -->
   <section class="hero">
     <h2>When a Gift Carries Meaning</h2>
-    <p>
-      You can begin here.
-    </p>
+    <p>You can begin here.</p>
     <a class="cta" href="#" target="_blank">
       Open Infinka GiftVerse
     </a>
