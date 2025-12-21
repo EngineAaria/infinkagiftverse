@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Infinka GiftVerse — Meaning, When It Matters</title>
+  <title>Infinka GiftVerse — When Meaning Matters More Than the Gift</title>
 
   <!-- SEO -->
-  <meta name="description" content="Infinka GiftVerse helps you choose gifts that feel right — emotionally, culturally, and personally. Calm, thoughtful, relationship-aware gifting intelligence." />
+  <meta name="description" content="Infinka GiftVerse is a human-centered gifting intelligence platform. We help you choose gifts and moments that feel emotionally right — calmly, thoughtfully, without pressure." />
   <meta name="robots" content="index, follow"/>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-cosmic: radial-gradient(
-        circle at top center,
-        #141a2a 0%,
-        #0c1020 45%,
-        #070a14 100%
-      );
-
-      --ink: #f5f5f5;
-      --muted: #b7b7c0;
+      --bg-dark: #070a14;
+      --bg-soft: rgba(10,14,30,0.65);
+      --ink: #f4f4f6;
+      --muted: #b7b9c4;
       --line: rgba(255,255,255,0.08);
-      --accent-gold: #d9a441;
+      --gold: #d9a441;
     }
 
     * {
@@ -35,23 +30,27 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg-cosmic);
+      background: radial-gradient(
+        circle at top center,
+        #141a2a 0%,
+        #0c1020 45%,
+        #070a14 100%
+      );
       color: var(--ink);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Stardust Layer */
+    /* Subtle cosmic texture */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background-image:
-        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.25), transparent),
-        radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.2), transparent),
-        radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.15), transparent),
-        radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,0.1), transparent);
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.15), transparent),
+        radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.1), transparent);
       pointer-events: none;
       z-index: -1;
     }
@@ -59,9 +58,9 @@
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 90px 24px;
+      padding: 100px 24px;
       border-bottom: 1px solid var(--line);
-      background: rgba(10, 14, 30, 0.55);
+      background: var(--bg-soft);
       backdrop-filter: blur(6px);
     }
 
@@ -72,18 +71,13 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 3.1rem;
       margin-bottom: 22px;
     }
 
     h2 {
       font-size: 2rem;
       margin-bottom: 18px;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
     }
 
     p {
@@ -94,34 +88,34 @@
 
     .hero {
       text-align: center;
-      padding-top: 130px;
-    }
-
-    .hero p {
-      margin: 22px auto 44px;
+      padding-top: 140px;
     }
 
     .badge {
       display: inline-block;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      margin-bottom: 14px;
-      color: var(--accent-gold);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      margin-bottom: 18px;
+      color: var(--gold);
+    }
+
+    .hero p {
+      margin: 26px auto 46px;
     }
 
     .cta {
       display: inline-block;
-      padding: 14px 30px;
-      border: 1px solid var(--accent-gold);
-      color: var(--accent-gold);
+      padding: 14px 32px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       transition: all 0.25s ease;
     }
 
     .cta:hover {
-      background: var(--accent-gold);
-      color: #0c1020;
+      background: var(--gold);
+      color: #070a14;
     }
 
     .grid {
@@ -139,13 +133,12 @@
 
     footer {
       text-align: center;
-      padding: 48px 20px;
+      padding: 56px 20px;
       font-size: 0.9rem;
       color: var(--muted);
-      background: rgba(10, 14, 30, 0.6);
+      background: rgba(10,14,30,0.7);
     }
 
-    /* Mobile Adjustments */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.3rem;
@@ -154,10 +147,10 @@
         font-size: 1.6rem;
       }
       section {
-        padding: 70px 18px;
+        padding: 80px 18px;
       }
       .hero {
-        padding-top: 100px;
+        padding-top: 110px;
       }
     }
   </style>
@@ -165,17 +158,17 @@
 
 <body>
 
-  <!-- HERO -->
+  <!-- HERO / THRESHOLD -->
   <section class="hero">
-    <span class="badge">PERSONAL GIFTING INTELLIGENCE</span>
+    <span class="badge">HUMAN-CENTERED GIFTING INTELLIGENCE</span>
     <h1>Infinka GiftVerse</h1>
     <p>
-      GiftVerse exists to help you choose gifts that feel right —
-      for the relationship, the moment, and the emotion behind it.
-      Calm guidance, when gifting matters.
-      </p>
-    <a class="cta" href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse" target="_blank">
-      Find the Right Gift
+      When a gift matters, the decision often feels heavier than it should.
+      GiftVerse exists to help you choose gifts and moments that feel emotionally right —
+      calmly, thoughtfully, without second-guessing.
+    </p>
+    <a class="cta" href="#" aria-label="Enter Infinka GiftVerse">
+      Enter GiftVerse
     </a>
   </section>
 
@@ -183,48 +176,61 @@
   <section>
     <h2>Why Gifting Feels Hard</h2>
     <p>
-      Giving a gift is rarely about the object.
-      It carries emotion, expectation, and the quiet fear of choosing wrong.
+      Gifting is rarely about the object.
+      It carries emotion, expectation, and the quiet fear of being misunderstood.
     </p>
 
     <div class="grid">
       <div class="card">
-        <h3>Overthinking</h3>
-        <p>Too many options. Too little emotional clarity.</p>
+        <h3>Too Many Options</h3>
+        <p>Endless ideas, very little clarity.</p>
       </div>
       <div class="card">
         <h3>Emotional Risk</h3>
-        <p>A wrong gift can feel worse than no gift at all.</p>
+        <p>A wrong gift can feel worse than no gift.</p>
       </div>
       <div class="card">
-        <h3>Generic Noise</h3>
-        <p>Most suggestions ignore who the gift is truly for.</p>
+        <h3>Social Boundaries</h3>
+        <p>What feels thoughtful in one context can feel awkward in another.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHAT GIFTVERESE PROVIDES -->
+  <!-- WHAT GIFTVERESE DOES -->
   <section>
-    <h2>What GiftVerse Provides</h2>
+    <h2>What GiftVerse Does Differently</h2>
     <p>
-      GiftVerse does not sell urgency or trends.
-      It helps you slow down and choose with intention.
+      GiftVerse does not sell urgency, trends, or products.
+      It focuses on meaning, appropriateness, and emotional safety.
     </p>
 
     <div class="grid">
       <div class="card">
-        <h3>Emotional Fit</h3>
-        <p>Suggestions aligned with relationships, not algorithms.</p>
+        <h3>Relationship-Aware</h3>
+        <p>Every suggestion is shaped by who the gift is for — not by categories.</p>
       </div>
       <div class="card">
-        <h3>Thoughtful Direction</h3>
-        <p>Fewer options — each carefully considered.</p>
+        <h3>Moment-Focused</h3>
+        <p>We help you design how a gift is experienced, not just what it is.</p>
       </div>
       <div class="card">
-        <h3>Quiet Confidence</h3>
-        <p>Choose knowing the gift carries meaning.</p>
+        <h3>Calm by Design</h3>
+        <p>Fewer options, clearer reasoning, and no pressure to perform.</p>
       </div>
     </div>
+  </section>
+
+  <!-- MOMENT PHILOSOPHY -->
+  <section>
+    <h2>Why Moments Matter</h2>
+    <p>
+      People rarely remember the gift itself.
+      They remember how it made them feel — and when it arrived.
+    </p>
+    <p style="margin-top:18px;">
+      GiftVerse helps you shape small, meaningful moments —
+      often quieter, often simpler, and often more powerful than grand gestures.
+    </p>
   </section>
 
   <!-- HOW IT WORKS -->
@@ -233,36 +239,36 @@
 
     <div class="grid">
       <div class="card">
-        <h3>1. Share the Moment</h3>
-        <p>Who the gift is for, and why it matters.</p>
+        <h3>1. Share the Situation</h3>
+        <p>The relationship, the moment, and why it matters.</p>
       </div>
       <div class="card">
         <h3>2. Understand the Emotion</h3>
-        <p>The relationship, the intent, the context.</p>
+        <p>What you want to express — and what needs care.</p>
       </div>
       <div class="card">
         <h3>3. See Thoughtful Options</h3>
-        <p>Carefully chosen ideas, not overwhelming lists.</p>
+        <p>Clear, limited suggestions with reasons, not hype.</p>
       </div>
       <div class="card">
-        <h3>4. Choose with Ease</h3>
-        <p>Move forward without second-guessing.</p>
+        <h3>4. Choose with Confidence</h3>
+        <p>A decision that feels right, without lingering doubt.</p>
       </div>
     </div>
   </section>
 
-  <!-- POSITIONING -->
+  <!-- ETHICAL POSITION -->
   <section>
-    <h2>Position</h2>
+    <h2>Our Position</h2>
 
     <div class="grid">
       <div class="card">
         <h3>GiftVerse Is</h3>
         <p>
-          A gifting guide.<br/>
-          Relationship-aware.<br/>
-          Calm and private.<br/>
-          Designed for meaning.
+          A calm guide.<br/>
+          Emotion-aware.<br/>
+          Relationship-respectful.<br/>
+          Built for meaning.
         </p>
       </div>
 
@@ -271,19 +277,22 @@
         <p>
           Not a marketplace.<br/>
           Not a discount engine.<br/>
-          Not impulsive shopping.<br/>
-          Not generic advice.
+          Not performative.<br/>
+          Not manipulative.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- FINAL ENTRY -->
   <section class="hero">
-    <h2>When a Gift Carries Meaning</h2>
-    <p>You can begin here.</p>
-    <a class="cta" href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse" target="_blank">
-      Open Infinka GiftVerse
+    <h2>When Meaning Matters</h2>
+    <p>
+      You don’t need more ideas.
+      You need the right one.
+    </p>
+    <a class="cta" href="#" aria-label="Begin a thoughtful gift">
+      Begin a Thoughtful Gift
     </a>
   </section>
 
