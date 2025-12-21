@@ -1,56 +1,177 @@
-import React, { useState, useEffect } from 'react';
-import { Heart, Sparkles, Shield, Compass } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infinka GiftVerse — Thoughtful Gifting Ideas</title>
 
-const InfinkaWebsite = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  <meta name="description" content="Explore thoughtful gifting ideas for every relationship and occasion. Calm inspiration, meaningful choices, and ethical recommendations by Infinka GiftVerse." />
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-  const principles = [
-    { icon: Heart, title: "Calm over Excitement", desc: "We bring clarity where there is confusion" },
-    { icon: Shield, title: "Safety over Impressiveness", desc: "Protecting the vulnerable emotions in every decision" },
-    { icon: Sparkles, title: "Meaning over Novelty", desc: "Every gift carries emotional weight, not just value" },
-    { icon: Compass, title: "Guidance over Selling", desc: "We help you decide, not purchase" }
-  ];
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --ink: #1c1c1c;
+      --muted: #6b6b6b;
+      --line: #e5e2dc;
+      --gold: #c9a24d;
+      --card: #ffffff;
+    }
 
-  return (
-    <div className="min-h-screen relative text-stone-800">
-      {/* Divine Cosmic Background */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-purple-900/20 to-rose-900/10"></div>
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-80 h-80 bg-pink-500/15 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-        </div>
-        {/* Subtle particles/stars */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: 'radial-gradient(2px 2px at 20% 30%, white, transparent), radial-gradient(2px 2px at 60% 70%, white, transparent), radial-gradient(1px 1px at 50% 50%, white, transparent), radial-gradient(1px 1px at 80% 10%, white, transparent), radial-gradient(2px 2px at 90% 60%, white, transparent)',
-          backgroundSize: '200px 200px, 300px 300px, 250px 250px, 400px 400px, 350px 350px',
-          backgroundPosition: '0 0, 40px 60px, 130px 270px, 70px 100px, 150px 50px'
-        }}></div>
-        {/* Lotus-inspired sacred geometry overlay */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 Q60 30 50 50 Q40 30 50 10 M50 50 Q60 70 50 90 Q40 70 50 50 M10 50 Q30 60 50 50 Q30 40 10 50 M50 50 Q70 60 90 50 Q70 40 50 50' fill='none' stroke='white' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E")`,
-          backgroundSize: '100px 100px'
-        }}></div>
-      </div>
-      {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg shadow-purple-500/10' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <div className="text-2xl font-light tracking-wide text-white">
-            Infinka <span className="font-normal bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">GiftVerse</span>
-          </div>
-          <div className="hidden md:flex items-center gap-10 text-sm font-light">
-            <a href="#essence" className="text-white/90 hover:text-white transition-colors">Essence</a>
-            <a href="#philosophy" className="text-white/90 hover:text-white transition-colors">Philosophy</a>
-            <a href="#approach" className="text-white/90 hover:text-white transition-colors">Approach</a>
-            <button className="px-6 py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-sm hover:from-purple-600 hover:to-pink-600 transitio
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: auto;
+      padding: 48px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: auto;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 28px;
+      border: 1px solid var(--line);
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .ad-card {
+      background: #f6f3ec;
+      border: 1px dashed var(--gold);
+      padding: 28px;
+    }
+
+    .ad-card span {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 48px 20px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Infinka GiftVerse</h1>
+  <p>
+    Thoughtful gifting ideas for real relationships.
+    Browse calmly. Choose meaningfully.
+  </p>
+</header>
+
+<section>
+  <h2>Popular Gifting Moments</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>For Someone You Care About</h3>
+      <p>Ideas that feel warm, personal, and emotionally safe.</p>
+    </div>
+    <div class="card">
+      <h3>Small Birthday Gestures</h3>
+      <p>Simple moments that feel more meaningful than big parties.</p>
+    </div>
+    <div class="card">
+      <h3>When Words Matter</h3>
+      <p>Gifts and gestures that speak gently, without overdoing.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Recommended Today</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Understated Personal Gifts</h3>
+      <p>Low-pressure ideas that still feel thoughtful.</p>
+    </div>
+
+    <div class="ad-card">
+      <span>SPONSORED</span>
+      <h3>Curated Gift Picks</h3>
+      <p>Carefully selected items that align with thoughtful gifting.</p>
+    </div>
+
+    <div class="card">
+      <h3>Moments Over Objects</h3>
+      <p>Ideas focused on experience, timing, and emotional impact.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Need Deeper Guidance?</h2>
+  <p>
+    When gifting feels emotionally important — not just optional —
+    Infinka GiftVerse offers calm, intelligent guidance tailored to your situation.
+  </p>
+</section>
+
+<footer>
+  © Infinka GiftVerse<br/>
+  Thoughtful gifting, calmly inspired.
+</footer>
+
+</body>
+</html>
