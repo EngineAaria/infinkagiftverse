@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Infinka GiftVerse — Thoughtful Gifting Ideas</title>
+  <title>Infinka GiftVerse — When Meaning Matters More Than the Gift</title>
 
-  <meta name="description" content="Explore thoughtful gifting ideas for every relationship and occasion. Calm inspiration, meaningful choices, and ethical recommendations by Infinka GiftVerse." />
+  <meta name="description" content="Infinka GiftVerse offers thoughtful gifting guidance for emotionally meaningful moments. Explore gifting niches, quiet ideas, and calm guidance without pressure." />
+  <meta name="robots" content="index, follow"/>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -19,7 +21,11 @@
       --card: #ffffff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -31,33 +37,47 @@
     header {
       max-width: 1100px;
       margin: auto;
-      padding: 48px 20px;
+      padding: 64px 20px 40px;
       text-align: center;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      margin-bottom: 16px;
+      font-size: 2.8rem;
+      margin-bottom: 18px;
     }
 
     header p {
       color: var(--muted);
-      max-width: 680px;
+      max-width: 720px;
       margin: auto;
+      font-size: 1.05rem;
     }
 
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 64px 20px;
       border-top: 1px solid var(--line);
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      margin-bottom: 24px;
+      font-size: 2.1rem;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 40px;
+      font-size: 1.02rem;
+    }
+
+    h3.subhead {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin: 56px 0 24px;
     }
 
     .grid {
@@ -70,12 +90,18 @@
       background: var(--card);
       padding: 28px;
       border: 1px solid var(--line);
+      transition: border-color 0.2s ease;
+      cursor: pointer;
     }
 
-    .card h3 {
+    .card:hover {
+      border-color: var(--gold);
+    }
+
+    .card h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      margin-bottom: 10px;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
     }
 
     .card p {
@@ -83,30 +109,32 @@
       font-size: 0.95rem;
     }
 
-    .ad-card {
-      background: #f6f3ec;
-      border: 1px dashed var(--gold);
-      padding: 28px;
-    }
-
-    .ad-card span {
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      color: var(--gold);
+    .card span {
       display: block;
-      margin-bottom: 8px;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--gold);
     }
 
     footer {
       text-align: center;
-      padding: 48px 20px;
+      padding: 56px 20px;
       font-size: 0.9rem;
       color: var(--muted);
       border-top: 1px solid var(--line);
+      margin-top: 80px;
     }
 
     @media (max-width: 768px) {
-      header h1 { font-size: 2.1rem; }
+      header h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.7rem;
+      }
+      h3.subhead {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
@@ -116,61 +144,89 @@
 <header>
   <h1>Infinka GiftVerse</h1>
   <p>
-    Thoughtful gifting ideas for real relationships.
-    Browse calmly. Choose meaningfully.
+    Thoughtful gifting guidance for moments that matter.
+    Explore calmly. Choose meaningfully.
   </p>
 </header>
 
 <section>
   <h2>Popular Gifting Moments</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>For Someone You Care About</h3>
-      <p>Ideas that feel warm, personal, and emotionally safe.</p>
-    </div>
-    <div class="card">
-      <h3>Small Birthday Gestures</h3>
-      <p>Simple moments that feel more meaningful than big parties.</p>
-    </div>
-    <div class="card">
-      <h3>When Words Matter</h3>
-      <p>Gifts and gestures that speak gently, without overdoing.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Recommended Today</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Understated Personal Gifts</h3>
-      <p>Low-pressure ideas that still feel thoughtful.</p>
-    </div>
-
-    <div class="ad-card">
-      <span>SPONSORED</span>
-      <h3>Curated Gift Picks</h3>
-      <p>Carefully selected items that align with thoughtful gifting.</p>
-    </div>
-
-    <div class="card">
-      <h3>Moments Over Objects</h3>
-      <p>Ideas focused on experience, timing, and emotional impact.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Need Deeper Guidance?</h2>
-  <p>
-    When gifting feels emotionally important — not just optional —
-    Infinka GiftVerse offers calm, intelligent guidance tailored to your situation.
+  <p class="section-intro">
+    Quiet entry points into the situations people struggle with most.
+    Each space below reflects a different kind of human moment.
   </p>
+
+  <!-- GROUP 1 -->
+  <h3 class="subhead">When Emotions Are Involved</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>When a Gift Carries Emotional Weight</h4>
+      <p>For moments where getting it wrong matters more than getting it right.</p>
+      <span>Explore this gently</span>
+    </div>
+
+    <div class="card">
+      <h4>When Words Matter More Than Objects</h4>
+      <p>When expression, tone, or timing says more than anything you could buy.</p>
+      <span>See what fits here</span>
+    </div>
+
+    <div class="card">
+      <h4>Rebuilding Connection Through a Gesture</h4>
+      <p>Quiet ways to reconnect, repair, or acknowledge distance.</p>
+      <span>Open this moment</span>
+    </div>
+  </div>
+
+  <!-- GROUP 2 -->
+  <h3 class="subhead">Quiet & Thoughtful Celebrations</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Small Gestures That Mean a Lot</h4>
+      <p>Simple actions with lasting emotional impact.</p>
+      <span>Explore this gently</span>
+    </div>
+
+    <div class="card">
+      <h4>Celebrating Without Overdoing It</h4>
+      <p>Acknowledging moments thoughtfully, without excess or pressure.</p>
+      <span>See what fits here</span>
+    </div>
+
+    <div class="card">
+      <h4>Moments Over Objects</h4>
+      <p>Designing memories, timing, and experience rather than things.</p>
+      <span>Open this moment</span>
+    </div>
+  </div>
+
+  <!-- GROUP 3 -->
+  <h3 class="subhead">When You Want to Be Thoughtful — Not Awkward</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Thoughtful Gifting on a Limited Budget</h4>
+      <p>Ideas that protect dignity while still feeling intentional.</p>
+      <span>Explore this gently</span>
+    </div>
+
+    <div class="card">
+      <h4>Gifting Across Boundaries</h4>
+      <p>For colleagues, elders, cultures, or unfamiliar dynamics.</p>
+      <span>See what fits here</span>
+    </div>
+
+    <div class="card">
+      <h4>When You’re Not Sure What’s Right</h4>
+      <p>A safe place to begin when nothing clearly fits.</p>
+      <span>Open this moment</span>
+    </div>
+  </div>
+
 </section>
 
 <footer>
   © Infinka GiftVerse<br/>
-  Thoughtful gifting, calmly inspired.
+  When meaning matters more than the gift.
 </footer>
 
 </body>
