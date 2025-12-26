@@ -5,19 +5,24 @@
   <title>Infinka GiftVerse – World’s Best Gifting Guide</title>
 
   <!-- SEO -->
-  <meta name="description" content="Infinka GiftVerse is the world’s most thoughtful gifting guide. Discover meaningful gifts and personalized help with GiftVerse AI.">
-  <meta name="keywords" content="gift ideas, gifting guide, thoughtful gifts, personalized gifting, GiftVerse AI">
+  <meta name="description" content="Infinka GiftVerse is the world’s most thoughtful gifting guide. Discover meaningful gifts and get personalized help from GiftVerse AI.">
+  <meta name="keywords" content="gift ideas, gifting guide, thoughtful gifts, personalized gifts, GiftVerse AI, Infinka">
   <meta name="author" content="Infinka GiftVerse">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://infinkagiftverse.com">
+
+  <!-- AEO -->
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Infinka GiftVerse – World’s Best Gifting Guide">
+  <meta property="og:description" content="Find the right gift for every emotion. Guided by GiftVerse AI.">
+  <meta property="og:type" content="website">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     :root {
-      --rose: #D8A7B1;   /* 60% */
-      --nude: #E8D9C1;   /* 30% */
-      --black: #1B1B1B;  /* 10% */
+      --rose: #D8A7B1;
+      --nude: #E8D9C1;
+      --black: #1B1B1B;
     }
 
     * {
@@ -26,94 +31,101 @@
       box-sizing: border-box;
     }
 
-    /* ---------- BASE ---------- */
+    /* ===== BODY WITH TEXTURE ===== */
     body {
       font-family: "Georgia", serif;
       background-color: var(--rose);
       color: var(--black);
       line-height: 1.6;
       position: relative;
-      overflow-x: hidden;
     }
 
-    /* ---------- TEXTURE OVERLAY (FIXED & VISIBLE) ---------- */
+    /* Texture overlay (THIS WAS MISSING BEFORE) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background-image: url("texture.png");
       background-repeat: repeat;
-      opacity: 0.12; /* adjust 0.08–0.15 */
-      z-index: 0;
+      background-size: auto;
+      opacity: 0.12;          /* adjust 0.08–0.15 */
       pointer-events: none;
+      z-index: 0;
     }
 
-    /* Ensure content above texture */
-    header, section, footer, .container {
+    /* Keep content above texture */
+    main, header, footer {
       position: relative;
       z-index: 1;
     }
 
-    /* ---------- HEADER ---------- */
+    /* ===== HUGE LUXURY HEADER ===== */
     header {
-      height: 80px;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     header img {
-      height: 56px;
+      max-width: 260px;
+      width: 60%;
+      height: auto;
     }
 
-    /* ---------- HERO (SILENT LUXURY) ---------- */
-    .hero {
-      height: calc(100vh - 80px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-    }
-
-    .hero img {
-      width: 180px;
-      max-width: 70%;
-      opacity: 0.95;
-    }
-
-    /* ---------- CTA SECTION ---------- */
-    .cta-section {
-      text-align: center;
-      padding: 80px 20px;
-      background-color: var(--nude);
-    }
-
-    .cta-section a {
-      display: inline-block;
-      padding: 18px 46px;
-      background-color: var(--black);
-      color: var(--nude);
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 16px;
-      letter-spacing: 1.2px;
-    }
-
-    /* ---------- CONTENT ---------- */
+    /* ===== LAYOUT ===== */
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 100px 20px;
+      padding: 80px 20px;
     }
 
+    /* ===== HERO (SECOND SECTION) ===== */
+    .hero {
+      background-color: var(--nude);
+      padding: 80px 30px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.85;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 42px;
+      background-color: var(--black);
+      color: var(--nude);
+      text-decoration: none;
+      border-radius: 40px;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== SECTIONS ===== */
     .sections {
+      margin-top: 90px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 40px;
     }
 
     .card {
-      background-color: rgba(232, 217, 193, 0.9);
+      background-color: rgba(232, 217, 193, 0.92);
       padding: 36px;
       border-radius: 14px;
     }
@@ -128,23 +140,24 @@
       opacity: 0.85;
     }
 
-    /* ---------- FOOTER ---------- */
+    /* ===== FOOTER ===== */
     footer {
+      margin-top: 120px;
+      padding: 40px 20px;
+      text-align: center;
       background-color: var(--black);
       color: var(--nude);
-      text-align: center;
-      padding: 40px 20px;
       font-size: 14px;
     }
 
-    /* ---------- MOBILE ---------- */
+    /* ===== MOBILE ===== */
     @media (max-width: 600px) {
-      .hero img {
-        width: 150px;
+      header {
+        min-height: 70vh;
       }
 
-      .cta-section {
-        padding: 60px 20px;
+      .hero h1 {
+        font-size: 32px;
       }
     }
   </style>
@@ -152,46 +165,50 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- Huge Luxury Header -->
   <header>
     <img src="logo.png" alt="Infinka GiftVerse Logo">
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="logo.png" alt="Infinka GiftVerse">
-  </section>
+  <main class="container">
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <a href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse">
-      Enter GiftVerse AI
-    </a>
-  </section>
+    <!-- Main Hero -->
+    <section class="hero">
+      <h1>The World’s Most Thoughtful Gifting Guide</h1>
+      <p>
+        Infinka GiftVerse helps you choose gifts that truly matter —
+        guided by emotion, occasions, and understanding.
+      </p>
 
-  <!-- CONTENT -->
-  <section class="container">
-    <div class="sections">
+      <div class="cta">
+        <a href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse">
+          Enter GiftVerse AI
+        </a>
+      </div>
+    </section>
+
+    <!-- Info Sections -->
+    <section class="sections">
       <div class="card">
         <h3>Emotion-First Gifting</h3>
-        <p>We begin with feelings and relationships, not products.</p>
+        <p>We begin with feelings, not products.</p>
       </div>
 
       <div class="card">
         <h3>Global Gift Intelligence</h3>
-        <p>Curated from cultures, trends, and human insights worldwide.</p>
+        <p>Inspired by cultures, moments, and real human stories.</p>
       </div>
 
       <div class="card">
-        <h3>AI-Guided Decisions</h3>
-        <p>A thoughtful AI that helps you choose gifts with meaning.</p>
+        <h3>AI-Guided Choices</h3>
+        <p>Find the right gift in seconds — calmly, thoughtfully.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+  </main>
+
   <footer>
-    © 2025 Infinka GiftVerse. All rights reserved.
+    © 2025 Infinka GiftVerse
   </footer>
 
 </body>
