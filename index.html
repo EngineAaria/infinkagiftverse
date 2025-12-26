@@ -10,19 +10,14 @@
   <meta name="author" content="Infinka GiftVerse">
   <link rel="canonical" href="https://infinkagiftverse.com">
 
-  <!-- AEO (Answer Engine Optimization) -->
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Infinka GiftVerse – World’s Best Gifting Guide">
-  <meta property="og:description" content="Find the right gift for every emotion. Guided by GiftVerse AI.">
-  <meta property="og:type" content="website">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     :root {
-      --rose: #D8A7B1;
-      --nude: #E8D9C1;
-      --black: #1B1B1B;
+      /* Swapped palette */
+      --nude: #E8D9C1;   /* 60% */
+      --rose: #D8A7B1;   /* 30% */
+      --black: #1B1B1B;  /* 10% */
     }
 
     * {
@@ -33,16 +28,22 @@
 
     body {
       font-family: "Georgia", serif;
-      background-color: var(--rose);
       color: var(--black);
-      line-height: 1.6;
+
+      /* Texture background */
+      background-color: var(--nude);
+      background-image: url("texture.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
     }
 
-    /* -------- Layout -------- */
+    /* ---------- Layout ---------- */
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 32px 20px;
+      padding: 32px 20px 80px;
     }
 
     header {
@@ -63,12 +64,13 @@
       font-weight: 500;
     }
 
-    /* -------- Hero -------- */
+    /* ---------- Hero ---------- */
     .hero {
-      background-color: var(--nude);
+      background-color: rgba(216, 167, 177, 0.85); /* rose */
       padding: 80px 30px;
-      border-radius: 12px;
+      border-radius: 14px;
       text-align: center;
+      backdrop-filter: blur(2px);
     }
 
     .hero h1 {
@@ -81,7 +83,7 @@
       max-width: 640px;
       margin: auto;
       font-size: 18px;
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
     .cta {
@@ -90,7 +92,7 @@
 
     .cta a {
       display: inline-block;
-      padding: 16px 40px;
+      padding: 16px 42px;
       background-color: var(--black);
       color: var(--nude);
       text-decoration: none;
@@ -99,7 +101,7 @@
       letter-spacing: 1px;
     }
 
-    /* -------- Sections -------- */
+    /* ---------- Sections ---------- */
     .sections {
       margin-top: 90px;
       display: grid;
@@ -108,9 +110,10 @@
     }
 
     .card {
-      background-color: rgba(232, 217, 193, 0.9);
-      padding: 32px;
-      border-radius: 12px;
+      background-color: rgba(216, 167, 177, 0.75);
+      padding: 34px;
+      border-radius: 14px;
+      backdrop-filter: blur(2px);
     }
 
     .card h3 {
@@ -120,12 +123,12 @@
 
     .card p {
       font-size: 15px;
-      opacity: 0.85;
+      opacity: 0.9;
     }
 
-    /* -------- Footer -------- */
+    /* ---------- Footer ---------- */
     footer {
-      margin-top: 100px;
+      margin-top: 120px;
       padding: 40px 20px;
       text-align: center;
       background-color: var(--black);
@@ -138,10 +141,10 @@
       text-decoration: none;
     }
 
-    /* -------- Mobile -------- */
+    /* ---------- Mobile ---------- */
     @media (max-width: 600px) {
       .hero h1 {
-        font-size: 34px;
+        font-size: 32px;
       }
 
       header {
@@ -158,57 +161,54 @@
     <!-- Header -->
     <header>
       <img src="logo.png" alt="Infinka GiftVerse Logo">
+      <nav>
+        <a href="#guide">Guide</a>
+        <a href="#ai">GiftVerse AI</a>
+        <a href="#about">About</a>
+      </nav>
     </header>
 
     <!-- Hero -->
     <section class="hero">
       <h1>The World’s Most Thoughtful Gifting Guide</h1>
       <p>
-        Infinka GiftVerse helps you choose gifts that truly matter.
-        Guided by emotions, occasions, and deep understanding —
-        not just products.
+        Infinka GiftVerse helps you choose gifts that truly matter —
+        guided by emotion, intention, and understanding.
       </p>
 
       <div class="cta">
-        <a href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse">Enter GiftVerse AI</a>
+        <a href="#ai">Enter GiftVerse AI</a>
       </div>
     </section>
 
-    <!-- Info Sections -->
+    <!-- Sections -->
     <section class="sections" id="guide">
       <div class="card">
         <h3>Emotion-First Gifting</h3>
-        <p>
-          We start with feelings, relationships and moments —
-          not catalogues.
-        </p>
+        <p>We begin with feelings, not products.</p>
       </div>
 
       <div class="card">
-        <h3>Global Gift Intelligence</h3>
-        <p>
-          Backed by worldwide trends, cultures and personal stories.
-        </p>
+        <h3>Worldwide Gift Intelligence</h3>
+        <p>Insights shaped by cultures and real experiences.</p>
       </div>
 
       <div class="card">
-        <h3>AI-Guided Decisions</h3>
-        <p>
-          GiftVerse AI helps you find the perfect gift in seconds.
-        </p>
+        <h3>AI-Guided Help</h3>
+        <p>GiftVerse AI helps you choose wisely, calmly.</p>
       </div>
     </section>
 
-    <!-- AI Section -->
+    <!-- AI -->
     <section class="hero" id="ai" style="margin-top: 100px;">
-      <h1>Meet GiftVerse AI</h1>
+      <h1>GiftVerse AI</h1>
       <p>
-        A calm, thoughtful AI that understands gifting like a human —
-        asking the right questions before suggesting anything.
+        A thoughtful AI assistant designed to understand gifting,
+        not rush decisions.
       </p>
 
       <div class="cta">
-        <a href="#">Start GiftVerse Chat</a>
+        <a href="#">Start Chat</a>
       </div>
     </section>
 
@@ -216,27 +216,21 @@
     <section class="sections" id="about">
       <div class="card">
         <h3>Why Infinka?</h3>
-        <p>
-          Because gifting is not about price.
-          It’s about understanding.
-        </p>
+        <p>Because meaningful gifts heal, connect, and stay remembered.</p>
       </div>
 
       <div class="card">
         <h3>Who It’s For</h3>
-        <p>
-          Anyone who wants their gift to be remembered —
-          not just unwrapped.
-        </p>
+        <p>For those who want to give with intention.</p>
       </div>
     </section>
   </div>
 
-  <!-- Footer -->
   <footer>
-    © 2025 Infinka GiftVerse ·  
+    © 2025 Infinka GiftVerse ·
     <a href="#">Privacy</a> · <a href="#">Terms</a>
   </footer>
 
 </body>
 </html>
+
