@@ -31,7 +31,6 @@
       box-sizing: border-box;
     }
 
-    /* ===== BODY WITH TEXTURE ===== */
     body {
       font-family: "Georgia", serif;
       background-color: var(--rose);
@@ -40,7 +39,6 @@
       position: relative;
     }
 
-    /* Texture overlay (THIS WAS MISSING BEFORE) */
     body::before {
       content: "";
       position: fixed;
@@ -48,18 +46,16 @@
       background-image: url("texture.png");
       background-repeat: repeat;
       background-size: auto;
-      opacity: 0.12;          /* adjust 0.08–0.15 */
+      opacity: 0.12;
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Keep content above texture */
     main, header, footer {
       position: relative;
       z-index: 1;
     }
 
-    /* ===== HUGE LUXURY HEADER ===== */
     header {
       min-height: 90vh;
       display: flex;
@@ -73,19 +69,18 @@
       height: auto;
     }
 
-    /* ===== LAYOUT ===== */
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 80px 20px;
     }
 
-    /* ===== HERO (SECOND SECTION) ===== */
     .hero {
       background-color: var(--nude);
       padding: 80px 30px;
       border-radius: 14px;
       text-align: center;
+      margin-top: 90px;
     }
 
     .hero h1 {
@@ -95,7 +90,7 @@
     }
 
     .hero p {
-      max-width: 640px;
+      max-width: 680px;
       margin: auto;
       font-size: 18px;
       opacity: 0.85;
@@ -116,7 +111,6 @@
       letter-spacing: 1px;
     }
 
-    /* ===== SECTIONS ===== */
     .sections {
       margin-top: 90px;
       display: grid;
@@ -140,7 +134,6 @@
       opacity: 0.85;
     }
 
-    /* ===== FOOTER ===== */
     footer {
       margin-top: 120px;
       padding: 40px 20px;
@@ -150,7 +143,6 @@
       font-size: 14px;
     }
 
-    /* ===== MOBILE ===== */
     @media (max-width: 600px) {
       header {
         min-height: 70vh;
@@ -165,51 +157,141 @@
 
 <body>
 
-  <!-- Huge Luxury Header -->
-  <header>
-    <img src="logo.png" alt="Infinka GiftVerse Logo">
-  </header>
+<header>
+  <img src="logo.png" alt="Infinka GiftVerse Logo">
+</header>
 
-  <main class="container">
+<main class="container">
 
-    <!-- Main Hero -->
-    <section class="hero">
-      <h1>The World’s Most Thoughtful Gifting Guide</h1>
+  <!-- EXISTING HERO -->
+  <section class="hero">
+    <h1>The World’s Most Thoughtful Gifting Guide</h1>
+    <p>
+      Infinka GiftVerse helps you choose gifts that truly matter —
+      guided by emotion, occasions, and understanding.
+    </p>
+    <div class="cta">
+      <a href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse">
+        Enter GiftVerse AI
+      </a>
+    </div>
+  </section>
+
+  <!-- EXISTING CORE CARDS -->
+  <section class="sections">
+    <div class="card">
+      <h3>Emotion-First Gifting</h3>
+      <p>We begin with feelings, not products.</p>
+    </div>
+    <div class="card">
+      <h3>Global Gift Intelligence</h3>
+      <p>Inspired by cultures, moments, and real human stories.</p>
+    </div>
+    <div class="card">
+      <h3>AI-Guided Choices</h3>
+      <p>Find the right gift in seconds — calmly, thoughtfully.</p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 1 -->
+  <section class="hero">
+    <h1>We Help Moments Succeed</h1>
+    <p>
+      People don’t come with gifting problems.  
+      They come with moments that matter.  
+      Infinka exists to help those moments turn into happy memories.
+    </p>
+  </section>
+
+  <!-- NEW SECTION 2 -->
+  <section class="sections">
+    <div class="card">
+      <h3>Relationships We Understand</h3>
       <p>
-        Infinka GiftVerse helps you choose gifts that truly matter —
-        guided by emotion, occasions, and understanding.
+        Parents, partners, friends, siblings, colleagues, and mentors —
+        each with their own emotional language.
       </p>
+    </div>
+    <div class="card">
+      <h3>Moments We Care For</h3>
+      <p>
+        Celebrations, gratitude, healing, apologies, new beginnings,
+        and quiet personal occasions.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Moments That Stay</h3>
+      <p>
+        When a moment is handled with care,
+        it becomes a memory that lasts.
+      </p>
+    </div>
+  </section>
 
-      <div class="cta">
-        <a href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse">
-          Enter GiftVerse AI
-        </a>
-      </div>
-    </section>
+  <!-- NEW SECTION 3 -->
+  <section class="hero">
+    <h1>How GiftVerse AI Helps</h1>
+    <p>
+      GiftVerse AI listens before it suggests.
+      It understands the emotion behind the moment,
+      then guides you calmly toward what feels right.
+    </p>
+  </section>
 
-    <!-- Info Sections -->
-    <section class="sections">
-      <div class="card">
-        <h3>Emotion-First Gifting</h3>
-        <p>We begin with feelings, not products.</p>
-      </div>
+  <!-- NEW SECTION 4 -->
+  <section class="sections">
+    <div class="card">
+      <h3>Not a Store</h3>
+      <p>
+        We don’t push products.
+        We protect meaning.
+      </p>
+    </div>
+    <div class="card">
+      <h3>A Gifting Philosophy</h3>
+      <p>
+        A thoughtful gift isn’t about price —
+        it’s about understanding.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Happy Moments</h3>
+      <p>
+        At Infinka, happiness is created
+        when moments succeed.
+      </p>
+    </div>
+  </section>
 
-      <div class="card">
-        <h3>Global Gift Intelligence</h3>
-        <p>Inspired by cultures, moments, and real human stories.</p>
-      </div>
+  <!-- NEW SECTION 5 -->
+  <section class="hero">
+    <h1>This Platform Is for You</h1>
+    <p>
+      If you believe moments matter more than products,
+      and happiness is built through care,
+      Infinka was made for you.
+    </p>
+  </section>
 
-      <div class="card">
-        <h3>AI-Guided Choices</h3>
-        <p>Find the right gift in seconds — calmly, thoughtfully.</p>
-      </div>
-    </section>
+  <!-- FINAL CTA -->
+  <section class="hero">
+    <h1>Whenever a Moment Matters</h1>
+    <p>
+      We’re here — calmly, thoughtfully —
+      to help it become a happy one.
+    </p>
+    <div class="cta">
+      <a href="https://chatgpt.com/g/g-693956e24aa881918865256e6849912d-infinka-giftverse">
+        Enter GiftVerse AI
+      </a>
+    </div>
+  </section>
 
-  </main>
+</main>
 
-  <footer>
-    © 2025 Infinka GiftVerse
-  </footer>
+<footer>
+  © 2025 Infinka GiftVerse
+</footer>
 
 </body>
 </html>
